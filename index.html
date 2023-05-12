@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>Payment Form</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  <!-- main container-->
+  <div class="container mt-5">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><strong>Payment Form </strong></a>
+        </div>
+      </nav>
+    </div>
+  
+    <!--first row of inputs card,cvs,amount-->
+    <form id="paymentForm">
+      <div class="form-row">
+
+         <div class="form-group col-md-4">
+        <label for="card"><strong>Card:</strong></label>
+        <input type="password" maxlength="16" class="form-control" id="card" name="card" placeholder="Enter card number" required>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="cvc"><strong>CVS:</strong></label>
+            <input type="password" maxlength="3" class="form-control" id="cvc" name="cvc" placeholder="Enter CVC" required>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="amount"><strong>Amount:</strong></label>
+            <input type="text" class="form-control" id="amount" name="amount" placeholder="Enter amount" required>
+        </div>
+
+      </div>
+
+      <!--second row of inputs fname,lname-->
+      <div class="form-row">
+
+      <div class="form-group col-md-6">
+        <label for="firstName"><strong>First Name:</strong></label>
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required>
+        </div>
+
+        <div class="form-group col-md-6">
+        <label for="lastName"><strong>Last Name:</strong></label>
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required>
+        </div>
+
+      </div>
+
+      <!--third row of inputs city,state,postal code-->
+      <div class="form-row">
+
+        <!--city form-->
+        <div class="form-group col-md-4">
+            <label for="city"><strong>City:</strong></label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Enter City" required>
+        </div>
+        
+        <!--state form-->
+        <div class="form-group col-md-3">
+          <label for="state"><strong>State:</strong></label>
+        <select class="form-control" id="state" name="state" placeholder="" required>
+          <option value="">Select a State</option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+         </select>
+          
+        </div>
+
+        <!--postal code form-->
+        <div class="form-group col-md-3">
+            <label for="postalCode"><strong>Postal Code:</strong></label>
+            <input type="text" maxlength="5" class="form-control" id="postalCode" name="postalCode" placeholder="Enter postal code" required>
+        </div>
+
+      </div>
+
+      
+      <div class="container">
+     <label><strong>Card Provider:</strong></label>
+      </div>
+
+      <!--fourth row card provider and message box-->
+      <div class="form-row">
+        
+        <div class="form-group col-md-6">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="visa" id="Visa" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Visa</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="MasterCard" value="option2" >
+                <label class="form-check-label" for="inlineRadio2">MasterCard</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="American Express" value="option3">
+                <label class="form-check-label" for="inlineRadio3">American Express</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Discover" value="option3">
+                <label class="form-check-label" for="inlineRadio3">Discover</label>
+              </div>
+
+          </div>
+
+           <!--message box form-->
+        <div class="form-group col-md-4">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+          </div>
+
+      </div>
+      
+      <!--fifth row cancel and submit buttons-->
+      <div class="row">
+        <div class="col-md-12 text-right">
+          <button type="reset" class="btn btn-secondary">Cancel</button>
+
+          <!--submit button will trigger function that changes some values to uppercase-->
+          <button class="btn btn-primary" onclick="myFunction()">Submit</button>
+
+    </form>
+    
+  </div>
+
+  <!--this script get html values from "index.html" then outputs it to "output.html"-->
+  <script>
+    // Function to store form data in local storage
+    function storeFormData(event) {
+      event.preventDefault();
+
+      const form = document.getElementById('paymentForm');
+      const formData = new FormData(form);
+
+      for (let [name, value] of formData) {
+        localStorage.setItem(name, value);
+      }
+
+      window.location.href = 'output.html';
+    }
+
+    // Add event listener to the form submit event
+    const form = document.getElementById('paymentForm');
+    form.addEventListener('submit', storeFormData);
+  </script>
+
+<!--changes fname and lname to uppercase when click submit button-->
+<script>
+  function myFunction() {
+    document.getElementById("firstName").value = document.getElementById("firstName").value.toUpperCase();
+    document.getElementById("lastName").value = document.getElementById("lastName").value.toUpperCase();
+  }
+  </script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

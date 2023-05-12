@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>Form Submission Output</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+     <!-- script for modal appears on page load-->
+    <script>
+        $(document).ready(function(){
+            $("#myModal").modal('show');
+        });
+    </script>
+
+    <!--modal-->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Payment Submission Complete</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Confrim your credentials.</p>
+                    <form>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--table output for form values-->
+  <div class="container mt-5">
+    <h2>Form Submission Output</h2>
+    <table class="table table-bordered">
+      <tbody>
+
+        <tr>
+          <th>Field</th>
+          <th>Value</th>
+        </tr>
+
+        <tr>
+          <td>Card</td>
+          <td id="cardValue"></td>
+        </tr>
+
+        <tr>
+          <td>CVC</td>
+          <td id="cvcValue"></td>
+        </tr>
+
+        <tr>
+          <td>Amount</td>
+          <td id="amountValue"></td>
+        </tr>
+
+        <tr>
+          <td>First Name</td>
+          <td id="firstNameValue"></td>
+        </tr>
+
+        <tr>
+          <td>Last Name</td>
+          <td id="lastNameValue"></td>
+        </tr>
+
+        <tr>
+          <td>City</td>
+          <td id="cityValue"></td>
+        </tr>
+
+        <tr>
+          <td>State</td>
+          <td id="stateValue"></td>
+        </tr>
+
+        <tr>
+          <td>Postal Code</td>
+          <td id="postalCodeValue"></td>
+        </tr>
+
+        <tr>
+          <td>Card Provider</td>
+          <td id="Visa" id="MasterCard"></td>
+        </tr>
+
+        <tr>
+          <td>Message</td>
+          <td id="messageValue"></td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+  </div>
+
+  <script>
+    // Function to retrieve form data from local storage and populate the output table
+    function retrieveFormData() {
+      const cardValue = localStorage.getItem('card');
+      const cvcValue = localStorage.getItem('cvc');
+      const amountValue = localStorage.getItem('amount');
+      const firstNameValue = localStorage.getItem('firstName');
+      const lastNameValue = localStorage.getItem('lastName');
+      const cityValue = localStorage.getItem('city');
+      const stateValue = localStorage.getItem('state');
+      const postalCodeValue = localStorage.getItem('postalCode');
+      const cardproviderValue = localStorage.getItem('Visa');
+      const messageValue = localStorage.getItem('message');
+
+      document.getElementById('cardValue').textContent = cardValue;
+      document.getElementById('cvcValue').textContent = cvcValue;
+      document.getElementById('amountValue').textContent = amountValue;
+      document.getElementById('firstNameValue').textContent = firstNameValue;
+      document.getElementById('lastNameValue').textContent = lastNameValue;
+      document.getElementById('cityValue').textContent = cityValue;
+      document.getElementById('stateValue').textContent = stateValue;
+      document.getElementById('postalCodeValue').textContent = postalCodeValue;
+      document.getElementById('cardproviderValue').textContent = cardproviderValue;
+      document.getElementById('messageValue').textContent = messageValue;
+    }
+
+    // Call the function to retrieve form data and populate the output table
+    retrieveFormData();
+  </script>
+
+</body>
+</html>
